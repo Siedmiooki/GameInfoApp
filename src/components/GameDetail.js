@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { smallImage } from "../util";
 
-const GameDetail = () => {
+const GameDetail = ({ pathId }) => {
     const { screen, game, isLoading } = useSelector((state) => state.details)
     const history = useHistory()
     const exitDetailsHandler = (e) => {
@@ -17,10 +18,10 @@ const GameDetail = () => {
         <>
             {!isLoading && (
                 <StyledCardShadow className="shadow" onClick={exitDetailsHandler}>
-            <StyledDetail>
+                    <StyledDetail layoutId={pathId}>
                 <StyledStats>
                     <div className="rating">
-                        <h3>{game.name}</h3>
+                                <h3>{game.name}</h3>
                         <p>Rating: {game.rating}</p>
                     </div>
                     <StyledInfo>
@@ -33,14 +34,14 @@ const GameDetail = () => {
                     </StyledInfo>
                 </StyledStats>
                 <StyledMedia>
-                    <img src={game.background_image} alt={game.background_image} />
+                            <motion.img layoutId={`image ${pathId}`} src={smallImage(game.background_image, 1280)} alt={game.background_image} />
                 </StyledMedia>
                 <StyledDescription>
                     <p>{game.description_raw}</p>
                 </StyledDescription>
                 <div className="gallery">
                     {screen.results.map(screen => (
-                        <img src={screen.image} alt={screen.image} key={screen.id} />
+                        <img src={smallImage(screen.image, 1280)} alt={screen.image} key={screen.id} />
                     ))}
                 </div>
             </StyledDetail>
