@@ -25,7 +25,7 @@ h2 {
     font-family: "Abril Fatface", cursive;
     font-size: 3rem;
     font-weight: lighter;
-    color: #4065cc
+    color: #914763
 }
 h3 {
     font-size: 1rem;
@@ -43,6 +43,10 @@ a {
 }
 img {
     display: block;
+}
+input {
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
 }
 `
 
