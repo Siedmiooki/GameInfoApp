@@ -45,6 +45,10 @@ input{
     border: none;
     margin-top: 1rem;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+    @media ( max-width: 1300px ) {
+        width: 50%;
+        font-size: 0.8rem;
+    }
 }
 button {
     font-size: 1.5rem;
@@ -52,9 +56,19 @@ button {
     padding: 0.5rem 2rem;
     cursor: pointer;
     background: #e0a83e;
-    color: white
+    color: white;
+    @media ( max-width: 1300px ) {
+        font-size: 0.8rem;
+    }
 }
-
+@media ( max-width: 1300px ) {
+    padding: 0;
+    }
+h1 {
+    @media ( max-width: 1300px ) {
+        font-size: 1.5rem;
+    }
+}
 `
 const StyledLogo = styled(motion.div)`
 display: flex;

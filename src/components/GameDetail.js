@@ -66,8 +66,10 @@ const GameDetail = ({ pathId }) => {
                 <StyledStats>
                     <div className="rating">
                                 <h3>{game.name}</h3>
+                                <StyledStars>
                         <p>Rating: {game.rating}</p>
                                 {getStars()}
+                                </StyledStars>
                     </div>
                     <StyledInfo>
                         <h3>Platforms</h3>
@@ -95,6 +97,17 @@ const GameDetail = ({ pathId }) => {
         </>
     );
 }
+
+const StyledStars = styled(motion.div)`
+@media (max-width: 1300px) {
+    text-align: center;
+}
+p {
+    @media (max-width: 1300px) {
+    font-size: 1rem;
+}
+}
+`
 
 const StyledCardShadow = styled(motion.div)`
     z-index: 10;
@@ -124,6 +137,12 @@ background: white;
 position: absolute;
 left: 10%;
 color: black;
+@media ( max-width: 1300px ) {
+    border-radius: 0rem;
+    padding: 0rem;
+    left: 5%;
+    width: 90%;
+}
 img {
     width: 100%;
 }
@@ -132,10 +151,26 @@ const StyledStats = styled(motion.div)`
 display: flex;
 align-items: center;
 justify-content: space-between;
+
+@media ( max-width: 1300px ) {
+display: list-item;
+align-items: center;
+}
 img {
     width: 2rem;
     height: 2rem;
     display: inline;
+    @media ( max-width: 1300px ) {
+        align-items: center;
+}
+}
+h3 {
+    @media ( max-width: 1300px ) {
+        text-align: center;
+}
+p {
+
+}
 }
 `
 const StyledInfo = styled(motion.div)`
@@ -144,9 +179,17 @@ text-align: center
 const StyledPlatforms = styled(motion.div)`
 display: flex;
 justify-content: space-evenly;
+@media ( max-width: 1300px ) {
+    justify-content: center;
+}
 img {
     margin-left: 3rem;
     cursor: pointer;
+    @media ( max-width: 1300px ) {
+        margin-left: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+}
 }
 `
 const StyledMedia = styled(motion.div)`
@@ -157,6 +200,13 @@ img {
 `
 const StyledDescription = styled(motion.div)`
 margin: 5rem 0rem;
+@media ( max-width: 1300px ) {
+    margin: 1rem 0rem;
+    p {
+        font-size: 0.8rem;
+        padding: 0rem 0.5rem;
+    }
+    }
 `
 
 export default GameDetail;

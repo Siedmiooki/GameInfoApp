@@ -20,17 +20,26 @@ html {
 body {
     font-family: "Montserrat", sans-serif;
     width: 100%;
+    @media ( max-width: 1300px ) {
+        padding: 0.2rem;
+    }
 }
 h2 {
     font-family: 'Monoton', cursive;
     font-size: 4rem;
     font-weight: lighter;
-    color: #e0a83e
+    color: #e0a83e;
+    @media ( max-width: 1300px ) {
+        font-size: 2rem;
+    }
 }
 h3 {
     font-size: 1rem;
     color: #333;
     padding: 1.5rem 0rem;
+    @media ( max-width: 1300px ) {
+        padding: 1rem 0rem;
+    }
 }
 p {
     font-size: 1.2rem;
