@@ -97,6 +97,7 @@ const GameDetail = ({ pathId }) => {
 }
 
 const StyledCardShadow = styled(motion.div)`
+    z-index: 10;
     width: 100%;
     min-height: 100vh;
     overflow-y: scroll;
@@ -115,6 +116,7 @@ const StyledCardShadow = styled(motion.div)`
     }
 `
 const StyledDetail = styled(motion.div)`
+z-index: 5;
 width: 80%;
 border-radius: 1rem;
 padding: 2rem 4rem;

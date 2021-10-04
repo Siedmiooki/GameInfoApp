@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import logo from "../img/logo.svg";
 import { fetchSearched } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
+import { fadeIn } from "../animations";
 
 const Nav = () => {
     const [textInput, setTextInput] = useState("")
@@ -21,10 +22,10 @@ const Nav = () => {
         dispatch({ type: "CLEAR_SEARCHED" })
     }
     return (
-        <StyledNav>
+        <StyledNav variants={fadeIn} initial="hidden" animate="show">
             <StyledLogo onClick={clearSearched}>
                 <img src={logo} alt="logo" />
-                <h1>IGDB App</h1>
+                <h1>I.G.D.B.</h1>
             </StyledLogo>
             <form className="search">
                 <input value={textInput} onChange={inputHandler} type="text" />
@@ -50,7 +51,7 @@ button {
     border: none;
     padding: 0.5rem 2rem;
     cursor: pointer;
-    background: #914763;
+    background: #e0a83e;
     color: white
 }
 

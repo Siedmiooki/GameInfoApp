@@ -22,10 +22,10 @@ body {
     width: 100%;
 }
 h2 {
-    font-family: "Abril Fatface", cursive;
-    font-size: 3rem;
+    font-family: 'Monoton', cursive;
+    font-size: 4rem;
     font-weight: lighter;
-    color: #914763
+    color: #e0a83e
 }
 h3 {
     font-size: 1rem;

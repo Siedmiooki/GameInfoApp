@@ -62,7 +62,9 @@ const Home = () => {
 
 const StyledGameList = styled(motion.div)`
     padding: 0rem 5rem;
+    z-index: 20;
     h2 {
+        text-align: center;
         padding: 5rem 0rem;
     }
 `
