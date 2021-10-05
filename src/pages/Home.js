@@ -37,15 +37,15 @@ const Home = () => {
                         </StyledGames>
                     </div>
                 ) : null}
-            <h2>Upcoming Games</h2>
+                <h2>Popular Games</h2>
             <StyledGames>
-                {upcomingGames.map((game) => (
+                    {popularGames.map((game) => (
                     <Game name={game.name} released={game.released} id={game.id} image={game.background_image} key={game.id} />
                 ))}
             </StyledGames>
-            <h2>Popular Games</h2>
+                <h2>Upcoming Games</h2>
             <StyledGames>
-                {popularGames.map((game) => (
+                    {upcomingGames.map((game) => (
                     <Game name={game.name} released={game.released} id={game.id} image={game.background_image} key={game.id} />
                 ))}
             </StyledGames>
