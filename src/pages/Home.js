@@ -80,6 +80,7 @@ const StyledGames = styled(motion.div)`
     grid-row-gap: 5rem;
     @media ( max-width: 1300px ) {
     display: list-item;
+    grid-row-gap: 5rem;
     }
 `
 
