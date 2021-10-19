@@ -25,7 +25,7 @@ const Nav = () => {
         <StyledNav variants={fadeIn} initial="hidden" animate="show">
             <StyledLogo onClick={clearSearched}>
                 <img src={logo} alt="logo" />
-                <h1>I.G.D.B.</h1>
+                <h1>Game Database App</h1>
             </StyledLogo>
             <form className="search">
                 <input value={textInput} onChange={inputHandler} type="text" />
