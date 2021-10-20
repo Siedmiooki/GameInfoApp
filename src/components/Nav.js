@@ -55,8 +55,9 @@ button {
     border: none;
     padding: 0.5rem 2rem;
     cursor: pointer;
-    background: #e0a83e;
+    background: #29e2e2;
     color: white;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
     @media ( max-width: 1300px ) {
         font-size: 0.8rem;
     }

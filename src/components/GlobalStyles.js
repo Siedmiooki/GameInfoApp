@@ -28,7 +28,7 @@ h2 {
     font-family: 'Monoton', cursive;
     font-size: 4rem;
     font-weight: lighter;
-    color: #e0a83e;
+    color: #29e2e2;
     @media ( max-width: 1300px ) {
         font-size: 2rem;
     }

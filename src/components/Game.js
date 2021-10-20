@@ -5,6 +5,7 @@ import { loadDetails } from "../actions/detailsAction";
 import { Link } from "react-router-dom";
 import { smallImage } from "../util";
 import { popUp } from "../animations";
+import { ZoomIn } from "@styled-icons/bootstrap/ZoomIn";
 
 
 const Game = ({ name, released, image, id }) => {
@@ -21,6 +22,9 @@ const Game = ({ name, released, image, id }) => {
             <Link to={`/game/${id}`}>
                 <h3>{name}</h3>
                 <p>{released}</p>
+                <ShadowStyled>
+                    <ZoomInStyled />
+                </ShadowStyled>
                 <motion.img layoutId={`image ${stringPathId}`} src={smallImage(image, 640)} alt={name} />
             </Link>
         </StyledGame>
@@ -35,6 +39,8 @@ border-radius: 1rem;
 cursor: pointer;
 overflow: hidden;
 max-width: 100%;
+background: #eeebeb;
+position: relative;
     img {
         width: 100%;
         height: 40vh;
@@ -48,6 +54,27 @@ max-width: 100%;
         border-radius: 1.5rem;
         margin-bottom: 1rem
     }
+`
+
+const ShadowStyled = styled(motion.div)`
+position: absolute;
+background: #29e2e2;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+width: 100%;
+height: 40vh;
+transition: 1s;
+:hover {
+    opacity: 0.4;
+}
+`
+
+const ZoomInStyled = styled(ZoomIn)`
+width: 16rem;
+height: 16rem;
+color: #eeebeb;
 `
 
 export default Game;
